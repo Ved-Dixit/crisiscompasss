@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earthquake Prediction Dashboard</title>
+    <link rel="stylesheet" href="earthquake.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeRuLRRT624PwlMAstzViH4wTK_mn9qD8&callback=initMap"></script>
+</head>
+<body>
+    <div class="container" id="container">
+        <h1>Earthquake Impact Prediction</h1>
+        <button id="predictBtn">Get Predictions</button>
+
+        <div class="results">
+            <h2>Predictions</h2>
+            <p><strong>Total Estimated Damage:</strong> <span id="damage">$0</span></p>
+            <p><strong>Estimated Affected Population:</strong> <span id="population">0</span></p>
+        </div>
+
+        <div class="map-container">
+            <h2>Impacted Buildings</h2>
+            <input type="text" id="searchBox" placeholder="Search building...">
+            <select id="severityFilter">
+                <option value="all">All</option>
+                <option value="low">Low Damage</option>
+                <option value="moderate">Moderate Damage</option>
+                <option value="high">High Damage</option>
+            </select>
+            <div id="map"></div>
+        </div>
+
+        <canvas id="damageChart"></canvas>
+    </div>
+
+    <script src="earthquake.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flood Impact Prediction</title>
+    <link rel="stylesheet" href="flood.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeRuLRRT624PwlMAstzViH4wTK_mn9qD8&callback=initMap"></script>
+</head>
+<body>
+    <div class="container" id="container">
+        <h1>Flood Impact Prediction</h1>
+        <button id="predictBtn">Get Predictions</button>
+
+        <div class="results">
+            <h2>Predictions</h2>
+            <p><strong>Total Estimated Damage in rupees:</strong> <span id="damage">0</span></p>
+            <p><strong>Estimated Affected Population:</strong> <span id="population">0</span></p>
+            <p><strong>Relief Camps Required:</strong> <span id="camps">0</span></p>
+            <p><strong>Boats Required:</strong> <span id="boats">0</span></p>
+            <p><strong>Food & Water Packs Needed:</strong> <span id="supplies">0</span></p>
+            <p><strong>Total Cost Required:</strong> <span id="Cost">0</span></p>
+        </div>
+
+        <div class="map-container">
+            <h2>Flood Risk Zones</h2>
+            <div id="map"></div>
+        </div>
+
+        <canvas id="resourcesChart"></canvas>
+    </div>
+
+    <script src="flood.js"></script>
+</body>
+</html>
